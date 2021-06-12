@@ -47,6 +47,23 @@ n = 1
 puts n.to_f
 puts n.to_f / 2
 
+# クラスメソッド(.class)
+# データ型を返すメソッド
+puts 'abc'.class
 
+# ヒアドキュメント
+a = <<TEXT
+１行目
+２行目
+３行目
+出力結果に改行が適応される
+<<のあとのTEXTを識別子といい、自由に指定することができる
+TEXT
+
+puts a
+
+# 配列の連結
+a = [10, 20, 30].join
+puts a
 # end
 
