@@ -125,4 +125,15 @@ end
 
 n = 11
 n > 10 ? (puts "１０より大きい") : (puts "１０より少ない")
+
+# 真偽値を返すメソッドを自分で作る場合、?で終わるメソッドの方が良い
+# 例：３で割り切れるかを判別するメソッド
+def multiple_of_three?(n)
+  n % 3 == 0
+end
+
+puts multiple_of_three?(4)
+puts multiple_of_three?(5)
+puts multiple_of_three?(6)
+
 # end
