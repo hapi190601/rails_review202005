@@ -74,6 +74,55 @@ puts 0377
 # 16進数(0xをつける)
 puts 0xff
 
+# &&や||が真偽値を返すタイミング(基本は左から順に式を評価)
+# 3
+puts 1 && 2 && 3
+# trueで処理が途中終了する
+puts 1 && nil && 3
+# falseで処理が途中終了する
+puts 1 && false && 3
+# = nilやfalseのように真偽が確定すると式の評価を終了し、最後に評価した値を返す
 
+# false
+puts nil || false
 
+# 優先順位が低い条件式(上から優先順位高い)
+=begin
+!
+&&
+||
+not
+and , or
+=end
+
+# unlessの条件分岐はelsifのように複数指定できない
+
+# elsifを多く使うコードはあまりよろしくない
+# ＝＞case文を使う
+
+country = "us"
+case country
+  when "japan"
+    puts "こんにちは"
+  when "us"
+    puts "Hello"
+  when "italy"
+    puts "ciao"
+  else
+    puts "???"
+end
+# thenを使うと１行ずつにまとめることも可能(あまり使わない)
+# 例↓
+# case country
+#   when "japan" then puts "こんにちは"
+#   when "us" then puts "Hello"
+#   when "italy" then puts "ciao"
+#   else puts "???"
+# end
+
+# コロンを使った条件分岐(可読性を考慮して使い分ける)
+# 雛形「式？真の場合の処理：偽だった場合の処理」
+
+n = 11
+n > 10 ? (puts "１０より大きい") : (puts "１０より少ない")
 # end
