@@ -136,4 +136,12 @@ puts multiple_of_three?(4)
 puts multiple_of_three?(5)
 puts multiple_of_three?(6)
 
+
+# loadとrequire
+# ライブラリやGem、自身で作成したRubyプログラムなどを読み込むときに使う
+# requireは一度しか読み込まない(＝途中で読み込むもの自体を編集しても反映されない)
+# loadは無条件で再読み込みできる
+
+
+
 # end
