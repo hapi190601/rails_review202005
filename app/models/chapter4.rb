@@ -57,5 +57,34 @@ numbers.each { |n|
 
 puts sum
 
+# mapメソッド(collectでも可＝エイリアスメソッド)
+# 各要素に対してブロック内の処理をした戻り値を配列の要素とする新しい配列を作る
+numbers = [1, 2, 3, 4, 5]
+
+# new_numbers = numbers.map do |n| n * 10 end
+new_numbers = numbers.map { |n| n * 10 }
+puts new_numbers
+
+# selectメソッド(エイリアスメソッドはfind_allメソッド)
+# 各要素に対してブロックを評価し、その戻り値が真である要素を集めた配列を返す。
+
+numbers = [1, 2, 3, 4, 5, 6]
+
+# do ~ endの書き方でも可
+even_numbers = numbers.select { |n| n.even? }
+even_numbers = numbers.find_all { |n| n.even? }
+puts even_numbers
+
+# rejectメソッド
+# 上記selectメソッドの逆
+# 各要素に対してブロックを評価し、その戻り値が真である要素を「除外した」配列を返す。
+
+numbers = [1, 2, 3, 4, 5, 6]
+non_multiples_of_three = numbers.reject { |n| n % 3 == 0}
+puts non_multiples_of_three
+
+# findメソッドはブロックの戻り値が真になった最初の要素を返す。
+# エイリアスメソッドはdetectメソッド
+
 
 # end
