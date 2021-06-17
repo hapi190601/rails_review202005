@@ -86,5 +86,45 @@ puts non_multiples_of_three
 # findメソッドはブロックの戻り値が真になった最初の要素を返す。
 # エイリアスメソッドはdetectメソッド
 
+# 範囲(Range)
+# 最初の値..最後の値(最後の値含む)
+# 最初の値...最後の値(最後の値含まない)
+
+# 範囲オブジェクトに変数を入れない場合は()で囲む必要がある
+# ↓エラーになる
+# 1..5.include?
+# ↓正
+# (1..5).include?
+
+a = [1, 2, 3, 4, 5]
+
+print a[0..2]
+print a[0...2]
+
+a = "abcdef"
+print a[1..3]
+print a[1...3]
+
+
+# 「n以上m以下」などの判定をするメソッドの場合、<=などの比較演算子よりも範囲メソッドの方が便利
+
+# ↓比較演算子の場合
+# def liquid(temperature)
+#   0 <= temperature && temperature < 100
+# end
+
+# ↓範囲メソッドの場合
+def liquid(temperature)
+  (0...100).include?(temperature)
+end
+
+puts liquid(50)
+puts liquid(101)
+
+# 範囲オブジェクトに対してto_aメソッドを呼び出すと値が連続する配列を作ることができる
+a = (1..5).to_a
+puts a
+# 出力結果 [1, 2, 3, 4, 5]
+
 
 # end
