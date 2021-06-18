@@ -35,8 +35,8 @@ def to_ints(rgb)
   second = rgb[3..4]
   third = rgb[5..6]
 
+  # mapメソッドは新しい配列を返す
   [first, second, third].map do |n|
-    # 配列の末尾に要素を追加
     n.hex
   end
 end
