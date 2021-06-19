@@ -246,4 +246,38 @@ a = Array.new(10) { |n| n % 3 + 1}
 p a
 # 出力結果[1, 2, 3, 1, 2, 3, 1, 2, 3, 1]
 
+
+# each_with_index(a, b)メソッド
+# aはブロック変数、bには0,1,2...とインデックス番号が入る
+
+fruits = ["apple", "orange", "melon"]
+
+fruits.each_with_index do |fruit, i|
+  p "#{i}：#{fruit}"
+end
+
+# # 処理結果
+# "0：apple"
+# "1：orange"
+# "2：melon"
+
+# mapメソッドと組み合わせて使うときはwith_indexメソッドを使う
+fruits = ["apple", "orange", "melon"]
+
+fruits.map.with_index do |fruit, i|
+   puts "#{i}：#{fruit}"
+end
+
+# インデックス番号を0以外から始める場合
+# each_with_indexメソッドに引数は渡せないため、each.with_index(引数)と書く
+# with_indexメソッドに引数を渡すイメージ
+fruits.each.with_index(10) do |fruit, i|
+   puts "#{i}：#{fruit}"
+end
+
+fruits.map.with_index(10) do |fruit, i|
+   puts "#{i}：#{fruit}"
+end
+
+
 # end
