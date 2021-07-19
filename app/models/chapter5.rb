@@ -1,2 +1,3 @@
-class Chapter5 < ApplicationRecord
-end
+# class Chapter5 < ApplicationRecord
+
+# end

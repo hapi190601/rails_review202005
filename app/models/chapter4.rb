@@ -279,5 +279,33 @@ fruits.map.with_index(10) do |fruit, i|
    puts "#{i}：#{fruit}"
 end
 
+# eachメソッドとmapメソッドの違い
+# eachメソッドは要素を順番に取り出す役割(mapメソッドのように新しい配列を返したりなどはしない)、その後の処理はブロック(do~end)内に準ずる
+# mapメソッドは繰り返し処理をした値を新しい配列の要素とし、新しい配列を返す
+
+# timesメソッド(繰り返し処理)
+sum = 0
+
+5.times do |n|
+  sum += n
+end
+
+# uptoメソッド、downtoメソッド(nからmまで数値を増やしたり減らしたりする処理)
+a = []
+10.upto(14) do |n|
+  a << n
+end
+
+# [10, 11, 12, 13, 14]
+p a
+
+b = []
+14.downto(10) do |n|
+  b << n
+end
+
+# [14, 13, 12, 11, 10]
+p b
+
 
 # end
