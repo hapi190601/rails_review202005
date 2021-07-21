@@ -17,3 +17,19 @@ currencies.each do |key, value|
 end
 
 # ※ブロック変数が１つの場合はキー、値を配列として受け取る
+
+
+
+# シンボル
+# :をつけて任意の名前を定義する(:apple)
+# シンボルはRuby内部では整数として管理されるため、文字列より高速に処理をすることが可能(よく使われるのはハッシュのキーとして)
+# シンボルはイミュータブルであるため、破壊的な変更はできない
+
+currencies = {"japan" => "yen", "us" => "dollar", "india" => "rupee"}
+
+p currencies["japan"]
+
+currencies = {:japan => "yen", :us => "dollar", :india => "rupee"}
+
+# 上記"japan"より高速で値を取り出すことが可能
+p currencies[:japan]
