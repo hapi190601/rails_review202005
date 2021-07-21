@@ -339,4 +339,39 @@ while a.size < 5
 end
 
 p a
+
+# 繰り返し処理用の制御構造(繰り返し処理の動きを変えるもの)
+# １：break
+# 繰り返し処理を脱出するメソッド
+# each,while,for,untilなど多くの繰り返し処理で使うことができる
+# 繰り返し内に繰り返しがある場合、breakで脱出する処理は一番内側の繰り返し処理になり、それ以外の処理は継続となる
+
+numbers = [1, 2, 3, 4, 5].shuffle
+
+numbers.each do |number|
+  p number
+  break if number == 5
+end
+
+# throwとcatchを使った脱出
+# 全ての繰り返し処理(複数の繰り返し処理)を脱出したい場合にbreakの代わりに使う
+# タグにはシンボル(:)を使い、変数のように自由に指定できる(例 :done)
+# catchのタグとthrowのタグが一致しない場合はエラーになる
+
+# テンプレ
+# catch タグ do
+# 　処理
+#   throw タグ
+# end
+
+# nextメソッド
+# 繰り返し処理を途中で中断し、次の繰り返し処理を進める処理
+
+numbers = [1, 2, 3, 4, 5, 6]
+
+numbers.each do |number|
+  next if number.even?
+  p number
+end
+
 # end
