@@ -33,3 +33,10 @@ currencies = {:japan => "yen", :us => "dollar", :india => "rupee"}
 
 # 上記"japan"より高速で値を取り出すことが可能
 p currencies[:japan]
+
+
+# シンボルがキーになる場合、省略した書き方がある
+# キー => 値　→→→ シンボル: 値
+# =>を使うより簡潔に書けるため、よく使われる
+
+currencies = {japan: "yen", us: "dollar", india: "rupee"}
