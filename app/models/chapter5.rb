@@ -40,3 +40,25 @@ p currencies[:japan]
 # =>を使うより簡潔に書けるため、よく使われる
 
 currencies = {japan: "yen", us: "dollar", india: "rupee"}
+
+
+
+# ハッシュでよくつかうメソッド
+currencies = {"japan" => "yen", "us" => "dollar", "india" => "rupee"}
+
+# １：keysメソッド→ハッシュのキーを配列として返す
+# 出力結果["japan", "us", "india"]
+p currencies.keys
+
+
+# ２：valuesメソッド→ハッシュの値を配列として返す
+# 出力結果["yen", "dollar", "ruppe"]
+p currencies.values
+
+# ３：has_key?メソッド→指定したキーが存在するか確認するメソッド
+# エイリアスメソッド：key?, include?, member?
+
+p currencies.has_key?("japan")
+p currencies.key?("us")
+p currencies.include?("us")
+p currencies.member?("india")
