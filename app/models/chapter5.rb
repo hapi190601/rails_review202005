@@ -72,3 +72,6 @@ h2 = {japan: "yen", **h}
 # 出力結果{:japan=>"yen", :us=>"dollar", :india=>"rupee"}
 # japanというキー、"yen"という値をもつハッシュ内に変数hに代入されたハッシュをぶちこむ感じ
 p h2
+
+
+
